@@ -1,10 +1,12 @@
-$(function() {
-	$("cite").each(function() {
-		var node = $(this);
-		var selector = node.data("selector");
+$("cite[data-selector]").each(function() {
+	var node = $(this);
 
-		$("<div/>", { html: "loading&hellip;"} ).addClass("item loading").insertBefore(node).load(selector, function() {
+	node.load(node.data("url") + " .self-citation > dd");
+
+	$("<div/>", { html: "loading&hellip;"} )
+		.addClass("item loading")
+		.insertBefore(node)
+		.load(node.data("url") + " " + node.data("selector"), function() {
 			$(this).removeClass("loading");
 		});
-	});
 });

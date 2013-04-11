@@ -2,11 +2,22 @@ body {
 	background: #ffe;
 }
 
+cite[data-selector] {
+	margin: 10px 20px 30px;
+	font-style: italic;
+	display: block;
+}
+
+th, td {
+	padding: 2px 5px;
+	vertical-align: top;
+}
+
 .item {
 	background: white;
 	margin: 10px;
 	border-radius: 5px;
-	box-shadow: 0 5px 10px #000;
+	box-shadow: 0 2px 10px #777;
 	padding: 10px;
 }
 
